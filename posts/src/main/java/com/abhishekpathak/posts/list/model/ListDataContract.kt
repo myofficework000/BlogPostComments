@@ -16,12 +16,14 @@ interface ListDataContract {
         fun saveUsersAndPosts(users: List<User>, posts: List<Post>)
         fun saveUserNewPost(post: Post)
         fun handleError(error: Throwable)
+        //fun deleteSinglePost(postId:Int)
     }
 
     interface Local {
         fun getPostsWithUsers(): Flowable<List<PostWithUser>>
         fun saveUsersAndPosts(users: List<User>, posts: List<Post>)
         fun saveNewPost(post: Post)
+       // fun deletePost(postId:Int)
     }
 
     interface Remote {

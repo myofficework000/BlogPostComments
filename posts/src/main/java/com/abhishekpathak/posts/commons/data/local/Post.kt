@@ -9,7 +9,7 @@ import com.google.gson.annotations.SerializedName
 @Entity(foreignKeys = [(ForeignKey(entity = User::class, parentColumns = ["id"],
         childColumns = ["userId"], onDelete = ForeignKey.CASCADE))],
         indices = [(Index("userId"))])
-data class Post(@SerializedName("userId") val userId: Int,
+data class Post(@SerializedName("userId") val userId: Int = 0,
                 @SerializedName("id") @PrimaryKey val postId: Int,
                 @SerializedName("title") val postTitle: String,
                 @SerializedName("body") val postBody: String)

@@ -18,7 +18,13 @@ interface PostDao {
     fun upsert(post: Post)
 
     @Delete
-    fun delete(post: Post)
+    fun delete(id: Post)
+/*
+
+    @Delete
+    fun delete(postId: Int)
+*/
+
 
     @Query("SELECT * FROM post")
     fun getAll(): Flowable<List<Post>>

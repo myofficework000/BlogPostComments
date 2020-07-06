@@ -66,6 +66,7 @@ class ListRepository(
         local.saveNewPost(post)
     }
 
+
     override fun handleError(error: Throwable) {
         postFetchOutcome.failed(error)
     }

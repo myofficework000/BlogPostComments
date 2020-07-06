@@ -31,4 +31,11 @@ class ListLocalData(private val postDb: PostDb, private val scheduler: Scheduler
             .performOnBack(scheduler)
             .subscribe()
     }
+
+   /* override fun deletePost(postId: Int) {
+        Completable.fromAction {
+            postDb.postDao().delete(postId)
+        }
+            .performOnBack(scheduler)
+            .subscribe()    }*/
 }

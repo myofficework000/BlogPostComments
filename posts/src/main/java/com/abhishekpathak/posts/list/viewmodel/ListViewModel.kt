@@ -28,8 +28,8 @@ class ListViewModel(private val repo: ListDataContract.Repository,
     }
     fun addPost(post : Post) {
         repo.saveUserNewPost(post);
-        refreshPosts()
     }
+
 
     override fun onCleared() {
         super.onCleared()
